@@ -1,0 +1,58 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://www.google.com/apis/ads/publisher/v202205" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ResponseHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="requestId"/>
+        <xs:element type="xs:short" name="responseTime"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAdUnitsByStatementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="rval">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:byte" name="totalResultSetSize"/>
+              <xs:element type="xs:byte" name="startIndex"/>
+              <xs:element name="results">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:short" name="id"/>
+                    <xs:element type="xs:string" name="name"/>
+                    <xs:element type="xs:string" name="description"/>
+                    <xs:element type="xs:string" name="targetWindow"/>
+                    <xs:element type="xs:string" name="status"/>
+                    <xs:element type="xs:int" name="adUnitCode"/>
+                    <xs:element name="inheritedAdSenseSettings">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="value">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="adSenseEnabled"/>
+                                <xs:element type="xs:string" name="borderColor"/>
+                                <xs:element type="xs:string" name="titleColor"/>
+                                <xs:element type="xs:string" name="backgroundColor"/>
+                                <xs:element type="xs:byte" name="textColor"/>
+                                <xs:element type="xs:short" name="urlColor"/>
+                                <xs:element type="xs:string" name="adType"/>
+                                <xs:element type="xs:string" name="borderStyle"/>
+                                <xs:element type="xs:string" name="fontFamily"/>
+                                <xs:element type="xs:string" name="fontSize"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
